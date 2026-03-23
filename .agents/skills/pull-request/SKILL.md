@@ -3,17 +3,18 @@ name: pull-request
 description: Creates pull request to default branch
 ---
 
-Use the Github MCP to push current branch changes (or only those specified) to remote branch, then create pull request to main branch.
+Create pull request with changes changes included in current branch. Always check if there is some github issue satisfied by current branch if so, add `closes` to request description.
 
 ## Pull request description
 Every pull request must have a short description of the included changes. It could contain 2 or 3 sections:
 
-#### Section one: Problem (optional)
-- Included when the main purpose of the request is to solve some knowm problem.
+#### Problem (optional)
+- Included only for bug fixes.
 - Up to 3 lines of compact description, small changes usually require only single sentence.
 
-#### Section two: Solution / Changes
+#### Solution / Changes
 - A Short explanation of changes included, preferably as bullet points.
+- 'Solution' if bug fix, 'changes' otherwise.
 
-#### Section three: Validation
-- A breif description of how changes were validated.
+#### Validation
+- 1 or 2 lines of description how changes were validated.
