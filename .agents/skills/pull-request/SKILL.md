@@ -1,20 +1,36 @@
 ---
 name: pull-request
-description: Creates pull request to default branch
+description: Creates pull request in github
 ---
 
-Create pull request with changes changes included in current branch. Always check if there is some github issue satisfied by current branch if so, add `closes` to request description.
+Creates pull request with current changes
+
+Commands
+- Check current branch: `git branch --show-current`
+- Check git status `git status`
+- Check current changes `git diff HEAD`
+
+## Instructions
+- create new branch if on main
+- explore and understand changes
+- put all changes in single commit with short descriptive message
+- push changes to origin
+- creates MR with github MCP
 
 ## Pull request description
-Every pull request must have a short description of the included changes. It could contain 2 or 3 sections:
+Every pull request must have a short description of the included changes.
 
-#### Problem (optional)
-- Included only for bug fixes.
-- Up to 3 lines of compact description, small changes usually require only single sentence.
+### Changes
+Short description of changes
 
-#### Solution / Changes
-- A Short explanation of changes included, preferably as bullet points.
-- 'Solution' if bug fix, 'changes' otherwise.
+### Example
+Changes
+- Updated XXX function to return YYY instead of CCC
 
-#### Validation
-- 1 or 2 lines of description how changes were validated.
+### Validation
+- Included only for code changes
+- Should be short and descriptive
+
+#### Example
+Validation
+- Added new test case verifying that XXX funtion now returns YYY
