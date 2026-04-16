@@ -15,7 +15,7 @@ Commands
 - explore and understand changes
 - put all changes in single commit with short descriptive message
 - push changes to origin
-- creates MR with github MCP
+- create MR 
 
 ## Pull request description
 Every pull request must have a short description of the included changes.
