@@ -18,9 +18,16 @@ Format: `{prefix}: {description up to 1 sentence}` e.g. chore: Updated java imag
 ### Pull request title
 Format: `{prefix}: {description up to 1 sentence}`. If there is only single commit use it as PR title, otherwise short title with same format describing primary goal of pull request.
 
-# Pull request description
+### Pull request description
 - Very short explanation of included changes (usually single line)
-- For code changes include explanation how change was verified in separate section.
+- For code changes, include a Verification section. Do not just say "tests passed." Instead, detail exactly what was tested and any additions made (e.g., "For the new API endpoint, added 3 unit tests in auth_test.go and verified the full suite passes").
+
+### How to understand the changes
+Usually, you are asked to create a PR for changes already written by an operator. This means you must explore the what, why, and where of the included changes.
+
+Before comparing the changes to the default branch, ensure the local default branch is up to date with the remote origin.
+
+During exploration, identify the primary goal of the pull request. Distinguish between the core purpose of the changes and any secondary steps or independent minor adjustments. The branch name, description, and title must focus on this primary goal. If you are uncertain about the intent, ask the user for additional context.
 
 ## Instructions
 1. Make sure default branch is up to date with origin
@@ -28,7 +35,7 @@ Format: `{prefix}: {description up to 1 sentence}`. If there is only single comm
 3. Check changes for secrets or tokens — stop and ask if found or unsure
 4. Create branch if not on one already
 5. Run lint and tests to verify changes
-6. Commit changes with short descriptive message
+6. Commit changes with short descriptive message - Do not commit until you are certain no secrets are exposed.
 7. Push changes
 8. Create pull request using `gh pr create`
 9. Print PR link to user
