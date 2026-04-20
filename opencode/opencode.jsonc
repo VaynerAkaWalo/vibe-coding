@@ -3,40 +3,25 @@
   "default_agent": "plan",
 
   "permission": {
-    // ask by default
-    "*": "ask",
-
-    // standard tool usage inside project directory
-    "edit": "allow",
-    "read": "allow",
-    "glob": "allow",
-    "grep": "allow",
-    "list": "allow",
-    "write": "allow",
-    "todowrite": "allow",
+    // allow to use standard tools
+    "*": "allow",
 
     // git operations
     "bash": {
+      // ask before any command not specified below
+      "*": "ask",
+
+      // do not install or run scripts with admin privileges
       "brew *": "deny",
       "sudo *": "deny",
 
-      // git operations
-      "git *": "ask",
-      "git status*": "allow",
-      "git log*": "allow",
-      "git diff*": "allow",
-      "git branch*": "allow",
-      "git checkout*": "allow",
-      "git merge*": "allow",
-      "git add*": "allow",
-      "git pull*": "allow",
-      "git push*": "allow",
-      "git remote*": "allow",
+      // allow git operations
+      "git *": "allow",
 
-      // github cli
+      // allow to create or manage pull requests
       "gh pr*": "allow",
 
-      // allow to compile and test
+      // allow to `run` or `test` projects with makefile
       "make run*": "allow",
       "make test*": "allow",
     },
