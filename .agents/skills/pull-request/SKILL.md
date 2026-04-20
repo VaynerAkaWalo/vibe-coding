@@ -23,11 +23,12 @@ Format: `{prefix}: {description up to 1 sentence}`. If there is only single comm
 - For code changes include explanation how change was verified in separate section.
 
 ## Instructions
-1. Explore changes compared to default branch
-2. Check changes for secrets or tokens — stop and ask if found or unsure
-3. Create branch if not on one already
-4. Run lint and tests to verify changes
-5. Commit changes with short descriptive message
-6. Push changes
-7. Create pull request using `gh pr create`
-8. Print PR link to user
+1. Make sure default branch is up to date with origin
+2. Explore changes compared to default branch
+3. Check changes for secrets or tokens — stop and ask if found or unsure
+4. Create branch if not on one already
+5. Run lint and tests to verify changes
+6. Commit changes with short descriptive message
+7. Push changes
+8. Create pull request using `gh pr create`
+9. Print PR link to user
