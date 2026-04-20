@@ -3,18 +3,42 @@
   "default_agent": "plan",
 
   "permission": {
+    // ask by default
     "*": "ask",
+
+    // standard tool usage inside project directory
     "edit": "allow",
     "read": "allow",
     "glob": "allow",
     "grep": "allow",
     "list": "allow",
+    "write": "allow",
+    "todowrite": "allow",
+
+    // git operations
     "bash": {
       "brew *": "deny",
       "sudo *": "deny",
-      "gh *": "allow",
-      "head *": "allow",
-      "git *": "allow",
+
+      // git operations
+      "git *": "ask",
+      "git status*": "allow",
+      "git log*": "allow",
+      "git diff*": "allow",
+      "git branch*": "allow",
+      "git checkout*": "allow",
+      "git merge*": "allow",
+      "git add*": "allow",
+      "git pull*": "allow",
+      "git push*": "allow",
+      "git remote*": "allow",
+
+      // github cli
+      "gh pr*": "allow",
+
+      // allow to compile and test
+      "make run*": "allow",
+      "make test*": "allow",
     },
   },
 }
