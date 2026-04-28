@@ -38,4 +38,16 @@ During exploration, identify the primary goal of the pull request. Distinguish b
 6. Commit changes with short descriptive message - Do not commit until you are certain no secrets are exposed.
 7. Push changes
 8. Create pull request using `gh pr create`
+   - Use inline newlines inside double-quoted `--body` strings. Do not use `cat`, heredocs, or temporary files.
+   - Example:
+```
+     gh pr create --title "prefix: description" --body "Short summary
+
+## Changes
+- Change 1
+- Change 2
+
+## Verification
+- What was tested"
+```
 9. Print PR link to user
