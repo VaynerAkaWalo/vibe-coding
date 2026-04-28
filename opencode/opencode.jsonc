@@ -19,11 +19,7 @@
       "git *": "allow",
 
       // allow to create or manage pull requests
-      "gh pr *": "allow",
-
-      // allow to `run` or `test` projects with makefile
-      "make run *": "allow",
-      "make test *": "allow",
+      "gh pr *": "allow"
     },
   },
 }
