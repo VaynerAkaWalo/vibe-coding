@@ -2,13 +2,13 @@
 - Always prefer using internal tools (`read`, `edit`, `glob`, `grep`, `list`) over bash commands.
 - Use bash tools only for tasks that cannot be accomplished with the embedded toolset.
 - Specifically: do not use bash for `ls`, `cat`, `head`, `tail`, `grep`, `find`, `sed`, `awk`, or any file-reading/searching operation.
+- All question should be asked using `question` tool
 
 ## Before You Start
 
 - If the task is ambiguous, list your assumptions explicitly before writing any code. Ask for clarification rather than guessing.
 - If multiple approaches exist, present tradeoffs (pros/cons) before implementing. If the requested approach is suboptimal, say so.
 - Identify what must **not** change and state it. Do not expand scope beyond what was asked.
-- When in doubt, use the question tool.
 
 ## Implementation
 
