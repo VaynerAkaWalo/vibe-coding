@@ -6,7 +6,7 @@
 
 ## Before You Start
 
-- If the task is ambiguous, list your assumptions explicitly before writing any code. Ask for clarification rather than guessing.
+- If the task is ambiguous, list your assumptions explicitly before writing any code. Use the `question` tool to ask for clarification rather than guessing.
 - If multiple approaches exist, present tradeoffs (pros/cons) before implementing. If the requested approach is suboptimal, say so.
 - Identify what must **not** change and state it. Do not expand scope beyond what was asked.
 
