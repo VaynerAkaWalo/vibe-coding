@@ -15,6 +15,14 @@
       "brew *": "deny",
       "sudo *": "deny",
 
+      // deny file-reading/searching operations that have internal tool equivalents
+      "cat": "deny",
+      "cat *": "deny",
+      "ls": "deny",
+      "ls *": "deny",
+      "grep": "deny",
+      "grep *": "deny",
+
       // allow git operations
       "git *": "allow",
 
