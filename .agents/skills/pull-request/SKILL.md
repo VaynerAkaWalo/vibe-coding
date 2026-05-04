@@ -4,7 +4,7 @@ description: Creates pull request with current changes
 ---
 
 ## Important
-Always check if changes include tokens or keys that should not be publicly exposed, if you find something always ask before proceeding, even if you are unsure.
+Always check if changes include tokens or keys that should not be publicly exposed, if you find something always use the `question` tool before proceeding, even if you are unsure.
 
 ## Name convention
 Available prefixes are `chore` - operational work, `fix` - bug fix and `feat` - new feature
@@ -27,12 +27,12 @@ Usually, you are asked to create a PR for changes already written by an operator
 
 Before comparing the changes to the default branch, ensure the local default branch is up to date with the remote origin.
 
-During exploration, identify the primary goal of the pull request. Distinguish between the core purpose of the changes and any secondary steps or independent minor adjustments. The branch name, description, and title must focus on this primary goal. If you are uncertain about the intent, ask the user for additional context.
+During exploration, identify the primary goal of the pull request. Distinguish between the core purpose of the changes and any secondary steps or independent minor adjustments. The branch name, description, and title must focus on this primary goal. If you are uncertain about the intent, use the `question` tool to ask the user for additional context.
 
 ## Instructions
 1. Make sure default branch is up to date with origin
 2. Explore changes compared to default branch
-3. Check changes for secrets or tokens — stop and ask if found or unsure
+3. Check changes for secrets or tokens — stop and use the `question` tool if found or unsure
 4. Create branch if not on one already
 5. Run lint and tests to verify changes
 6. Commit changes with short descriptive message - Do not commit until you are certain no secrets are exposed.
