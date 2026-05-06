@@ -2,6 +2,15 @@
   "$schema": "https://opencode.ai/config.json",
   "default_agent": "plan",
 
+  "agent": {
+    "build": {
+      "model": "opencode-go/deepseek-v4-flash",
+    },
+    "plan": {
+      "model": "opencode-go/kimi-k2.6",
+    },
+  },
+
   "permission": {
     // allow to use standard tools
     "*": "allow",
@@ -22,12 +31,14 @@
       "ls *": "deny",
       "grep": "deny",
       "grep *": "deny",
+      "head *": "deny",
+      "tail *": "deny",
 
       // allow git operations
       "git *": "allow",
 
       // allow to create or manage pull requests
-      "gh pr *": "allow"
+      "gh pr *": "allow",
     },
   },
 }
